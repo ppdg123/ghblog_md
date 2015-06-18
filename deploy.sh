@@ -1,4 +1,5 @@
 #!/bin/bash
-git add .
-git commit -m "Post"
-git push origin master
+git pull origin master
+hexo g
+hexo d
+
