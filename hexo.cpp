@@ -5,12 +5,18 @@
 
 int main(int argc, char * argv[])
 {
+	char cmd[200];
+	char fn[200];
+	if(argc == 2)
+	{
+	    sprintf(cmd,"haroopad %s",argv[1]);
+	    system(cmd);
+	    return 0;
+	}
 	time_t timep;
 	struct tm *p;
 	time(&timep);
 	p = localtime(&timep);
-	char cmd[200];
-	char fn[200];
 	sprintf(fn,"%d-%d-%d-%d-%d-%d.md",1900+p->tm_year,1+p->tm_mon,p->tm_mday,p->tm_hour,p->tm_min,p->tm_sec);
 	FILE * fp;
 	fp = fopen(fn,"w");
