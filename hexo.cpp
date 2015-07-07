@@ -20,7 +20,7 @@ int main(int argc, char * argv[])
 	sprintf(fn,"%d-%d-%d-%d-%d-%d.md",1900+p->tm_year,1+p->tm_mon,p->tm_mday,p->tm_hour,p->tm_min,p->tm_sec);
 	FILE * fp;
 	fp = fopen(fn,"w");
-	fprintf(fp,"title: []\ndate: %d-%d-%d %d:%d:%d\ntags: \n---\n",1900+p->tm_year,1+p->tm_mon,p->tm_mday,p->tm_hour,p->tm_min,p->tm_sec);
+	fprintf(fp,"title: []\ndate: %d-%d-%d %d:%d:%d\ntags: \n---\n<!--more-->\n",1900+p->tm_year,1+p->tm_mon,p->tm_mday,p->tm_hour,p->tm_min,p->tm_sec);
 	fclose(fp);
 	sprintf(cmd,"haroopad %s",fn);
 	system(cmd);
