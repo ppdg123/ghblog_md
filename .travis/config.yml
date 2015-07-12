@@ -1,0 +1,13 @@
+---
+last_check:
+  etag: 
+  version: 1.7.7
+  at: 1436690448
+checked_completion: true
+completion_version: 1.7.7
+endpoints:
+  https://api.travis-ci.org/:
+    access_token: bTnsHBj2V3lZBn7Kyi7WDg
+repos:
+  ppdg123/ghblog_md:
+    endpoint: https://api.travis-ci.org/
