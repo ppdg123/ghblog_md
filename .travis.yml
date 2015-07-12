@@ -14,13 +14,16 @@ before_install:
 - git config --global user.name "Wang@Travis"
 - git config --global user.email ppdg@foxmail.com
 - npm install hexo-cli -g
+- npm install hexo-deployer-git --save
 - git clone git@bitbucket.org:ppdg123/ghblog_source.git ghblog
-- cd ./ghblog/source/
+- cd ./ghblog/
+- npm install
+- cd ./source/
 - git clone git@github.com:ppdg123/ghblog_md.git _posts
 script:
-- cd ~/ghblog
-- hexo generate
-- hexo deploy
+- hexo clean
+- hexo g
+- hexo d
 branches:
   only:
   - master
