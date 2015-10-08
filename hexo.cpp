@@ -9,7 +9,7 @@ int main(int argc, char * argv[])
 	char fn[200];
 	if(argc == 2)
 	{
-	    sprintf(cmd,"haroopad %s",argv[1]);
+	    sprintf(cmd,"c9 open %s",argv[1]);
 	    system(cmd);
 	    return 0;
 	}
