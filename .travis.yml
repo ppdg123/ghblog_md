@@ -1,6 +1,6 @@
 language: node_js 
 node_js:
-- '0.10' 
+- '9' 
 addons:
   ssh_known_hosts:
   - bitbucket.org
@@ -17,6 +17,8 @@ before_install:
 - npm install hexo-deployer-git --save
 - git clone git@bitbucket.org:ppdg123/ghblog_source.git ghblog
 - cd ./ghblog/
+- sed -i "s/auto_detect: true/auto_detect: false/g" _config.yml
+- cat _config.yml
 - npm install
 - cd ./source/
 - git clone git@github.com:ppdg123/ghblog_md.git _posts
